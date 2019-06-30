@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
-            steps {
-                mvn test
+         stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
             }
         }
     }
