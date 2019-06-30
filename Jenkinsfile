@@ -2,10 +2,9 @@ pipeline {
     agent any
     stages {
          stage('Build') { 
-            steps { 
-               sh 'mvn --test' 
-            }
+            steps { sh 'mvn clean install'}
         }
+        stage('test'){}
     }
     post { 
         always { 
