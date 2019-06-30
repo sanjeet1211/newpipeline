@@ -1,15 +1,22 @@
 pipeline {
     agent any
-    stages {
-         stage('Build') { 
-            steps { 
-               sh 'mvn --test' 
-            }
-        }
-    }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
-    }
+  tools{
+maven 'maven 3'
+jdk 'java 8'
+}
+ 
+stages {
+stage ("initialize") {
+steps {
+sh '''
+echo "PATH = ${PATH}"
+echo "M2_HOME = ${M2_HOME}"
+'''
+}
+stage ('Build project') {
+steps {
+sh 'mvn clean verify
+ 
+}
+}
 }
