@@ -2,6 +2,6 @@ pipeline {
     agent any
     stages {
          stage('Build') { 
-            steps {mvn --test}
+            steps {'mvn --test'}
         }
          }}
