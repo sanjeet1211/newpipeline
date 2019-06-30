@@ -14,4 +14,4 @@ pipeline {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
-            }}
+            }}}
