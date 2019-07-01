@@ -11,7 +11,7 @@
             stage('Test') {
                 bat 'mvn test'
                 script {
-                    if ($params.environment == 'Hello') {
+                    if (params.environment == 'Hello') {
                         echo 'I only execute on the master branch'
                     } else {
                         echo 'I execute elsewhere'
