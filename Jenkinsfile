@@ -1,13 +1,12 @@
 pipeline {
     agent any
-    stages {
-         stage('Build') {
-            steps {
-                sh 'mvn -B -DskipTests clean package'
+    	{
+            stage('SCM Checkout')
+            {
+             tool name: 'Maven', type: 'maven'
+             git 'https://github.com/sanjeet1211/newpipeline.git'
             }
-        }
-        stage('Test') {
-            steps {
+            stage('Test') {
                 sh 'mvn test'
-            }}
-           }}
+             }
+          }}
