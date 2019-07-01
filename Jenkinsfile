@@ -6,6 +6,6 @@
              git 'https://github.com/sanjeet1211/newpipeline.git'
             }
             stage('Test') {
-                sh 'mvn test'
+                bat 'mvn test'
              }
           }
