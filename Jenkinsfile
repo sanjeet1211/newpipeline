@@ -7,14 +7,12 @@
             }
             stage('Test') {
                 bat 'mvn test'
-                steps {
                 script {
                     if ($env==test) {
                         echo 'I only execute on the master branch'
                     } else {
                         echo 'I execute elsewhere'
                     }
-                }
              }
              }
           }
