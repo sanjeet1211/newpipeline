@@ -1,8 +1,5 @@
     node
     	{
-    	parameters {
-        string(name: 'environment', defaultValue: 'HelloS', description: 'How should I greet the world?')
-  		  }
             stage('SCM Checkout')
             {
              tool name: 'Maven', type: 'maven'
