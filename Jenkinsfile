@@ -1,5 +1,4 @@
-pipeline {
-    agent any
+    node
     	{
             stage('SCM Checkout')
             {
@@ -9,4 +8,4 @@ pipeline {
             stage('Test') {
                 sh 'mvn test'
              }
-          }}
+          }
