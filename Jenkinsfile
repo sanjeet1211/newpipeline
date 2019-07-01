@@ -1,5 +1,8 @@
     node
     	{
+    	parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+  		  }
             stage('SCM Checkout')
             {
              tool name: 'Maven', type: 'maven'
@@ -8,7 +11,7 @@
             stage('Test') {
                 bat 'mvn test'
                 script {
-                    if (${params.environment} == 'test') {
+                    if (${params.environment} == 'Greeting') {
                         echo 'I only execute on the master branch'
                     } else {
                         echo 'I execute elsewhere'
