@@ -1,6 +1,6 @@
     node
     	{
-            stage('SCM Checkout')
+           stage('SCM Checkout')
             {
              tool name: 'Maven', type: 'maven'
              git 'https://github.com/sanjeet1211/newpipeline.git'
