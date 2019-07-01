@@ -1,7 +1,7 @@
     node
     	{
     	parameters {
-        string(name: 'environment', defaultValue: 'Hello', description: 'How should I greet the world?')
+        string(name: 'environment', defaultValue: 'HelloS', description: 'How should I greet the world?')
   		  }
             stage('SCM Checkout')
             {
