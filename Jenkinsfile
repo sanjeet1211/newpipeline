@@ -8,7 +8,7 @@
             stage('Test') {
                 bat 'mvn test'
                 script {
-                    if (env.BRANCH_NAME == 'master') {
+                    if (${params.environment} == 'test') {
                         echo 'I only execute on the master branch'
                     } else {
                         echo 'I execute elsewhere'
