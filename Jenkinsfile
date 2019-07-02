@@ -7,10 +7,11 @@
             }
             stage('Test') {
                 script {
-                    if (params.environment == 'Hello') {
+                    if (params.environment == 'Prod') {
                         echo 'I only execute on the master branch'
                          bat 'mvn test'
-                    } else {
+                    } 
+                    if (params.environment == 'Test'){
                         echo 'I execute elsewhere'
                     }
              }
