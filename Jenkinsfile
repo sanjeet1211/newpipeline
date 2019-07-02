@@ -7,11 +7,11 @@
             }
             stage('Test') {
                 script {
-                    if (params.platform == 'Prod') {
+                    if (params.platform == 'iOS') {
                         echo 'I only execute on the master branch' 
                         bat 'mvn test -Pprod'
                        } 
-                    if (params.platform == 'Test'){
+                    if (params.platform == 'Android'){
                         echo 'I execute elsewhere'
                         bat 'mvn test -Pdev'
                       }
