@@ -40,7 +40,7 @@
 			</build>
 		</profile>
 		<profile>
-			<id>prod</id>
+			<id>both</id>
 			<build>
 				<plugins>
 					<plugin>
