@@ -9,7 +9,8 @@
                 script {
                     if (params.environment == 'Prod') {
                         echo 'I only execute on the master branch' 
-                        bat 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
+                        def suiteXmlFile=testng.xml
+                        bat 'mvn test -Dsurefire.suiteXmlFiles=$suiteXmlFile'
                          
                     } 
                     if (params.environment == 'Test'){
