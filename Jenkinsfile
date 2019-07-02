@@ -13,7 +13,8 @@
                        } 
                     if (params.environment == 'Test'){
                         echo 'I execute elsewhere'
-                    }
+                        bat 'mvn test -Pdev'
+                      }
                     
              }
              }
