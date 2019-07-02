@@ -7,21 +7,19 @@
             }
             stage('Test') {
                 script {
-                    if (params.environment == 'Prod') {
+                    if (params.platform == 'Prod') {
                         echo 'I only execute on the master branch' 
                         bat 'mvn test -Pprod'
                        } 
-                    if (params.environment == 'Test'){
+                    if (params.platform == 'Test'){
                         echo 'I execute elsewhere'
                         bat 'mvn test -Pdev'
                       }
                       
-                    if (params.environment == 'Both') {
+                    if (params.platform == 'Both') {
                         echo 'I only execute on the master branch' 
                         bat 'mvn test -Pboth'
                        } 
-                   
-                    
-             }
+            }
              }
           }
