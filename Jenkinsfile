@@ -15,6 +15,12 @@
                         echo 'I execute elsewhere'
                         bat 'mvn test -Pdev'
                       }
+                      
+                    if (params.environment == 'Both') {
+                        echo 'I only execute on the master branch' 
+                        bat 'mvn test -Pboth'
+                       } 
+                   
                     
              }
              }
