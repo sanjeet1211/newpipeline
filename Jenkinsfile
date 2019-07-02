@@ -11,8 +11,7 @@
                         echo 'I only execute on the master branch' 
                         def suiteXmlFile=testng.xml
                         bat 'mvn test -Dsurefire.suiteXmlFiles=$suiteXmlFile'
-                         
-                    } 
+                       } 
                     if (params.environment == 'Test'){
                         echo 'I execute elsewhere'
                     }
