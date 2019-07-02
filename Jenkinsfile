@@ -8,7 +8,9 @@
             stage('Test') {
                 script {
                     if (params.environment == 'Prod') {
-                        echo 'I only execute on the master branch'
+                        echo 'I only execute on the master branch'  
+                        params.environment='testng.xml'
+                        echo "$params.environment"
                          bat 'mvn test'
                     } 
                     if (params.environment == 'Test'){
