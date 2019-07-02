@@ -18,9 +18,22 @@
 
         <profile>
             <id>prod</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+           
+              
+        <build>
+   <plugins>
+    <plugin>
+     <groupId>org.apache.maven.plugins</groupId>
+     <artifactId>maven-surefire-plugin</artifactId>
+     <version>2.14.1</version>
+     <configuration>
+       <excludedGroups>unit</excludedGroups>
+     </configuration>
+    </plugin>
+  </plugins>
+ </build>
+				
+            		
          </profile>
 
     </profiles>
@@ -29,23 +42,7 @@
 				<!-- <sourceDirectory>src</sourceDirectory> -->
 				<plugins>
 					<!-- Following plugin executes the testng tests -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.14.1</version>
-							 <executions>
-                     <execution>
-                        <phase>test</phase>
-                        <configuration>
-							<!-- Suite testng xml file to consider for test execution -->
-							<suiteXmlFiles>
-								<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-							</suiteXmlFiles>
-							
-						</configuration>
-							</execution>
-                  </executions>
-					</plugin>
+					
 				
 					<!-- Compiler plugin configures the java version to be usedfor compiling 
 						the code -->
