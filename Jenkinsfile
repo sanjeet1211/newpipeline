@@ -9,8 +9,8 @@
                 script {
                     if (params.environment == 'Prod') {
                         echo 'I only execute on the master branch' 
-                        def testng= 'testng.xml'
-                        echo "testng"
+                        params.environment= 'testng.xml'
+                        echo "params.environment"
                          bat 'mvn test'
                     } 
                     if (params.environment == 'Test'){
