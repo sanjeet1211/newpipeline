@@ -14,6 +14,7 @@
                     if (params.environment == 'Test'){
                         echo 'I execute elsewhere'
                     }
+                    
              }
              }
           }
