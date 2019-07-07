@@ -9,7 +9,10 @@
                 script {
                     if (params.platform == 'iOS') {
                         echo 'I only execute on the master branch' 
-                        bat 'mvn test -Pprod'
+                       
+                        configFileProvider([configFile('C:\DevOps\apache-maven-3.5.3-bin\apache-maven-3.5.3\conf')]) {
+                        sh 'mvn -s $MAVEN_SETTINGS test -Pprod'
+    // some block}
                        } 
                     if (params.platform == 'Android'){
                         echo 'I execute elsewhere'
