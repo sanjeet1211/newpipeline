@@ -10,7 +10,7 @@
                     if (params.platform == 'iOS') {
                         echo 'I only execute on the master branch' 
                        
-                         configFileProvider([configFile(fileId: 'UUID', variable: 'MAVEN_GLOBAL_SETTINGS')]) {
+                         configFileProvider([configFile('401af218-ccdc-495b-92bd-fbbcd5d3d064')]) {
                     sh 'mvn -gs $MAVEN_GLOBAL_SETTINGS test -Pprod'
                 //     sh 'mvn -s $MAVEN_SETTINGS test -Pprod1'
                 }
