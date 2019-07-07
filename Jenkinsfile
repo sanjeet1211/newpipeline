@@ -11,7 +11,7 @@
                         echo 'I only execute on the master branch' 
                        
                         configFileProvider([configFile('C:\DevOps\apache-maven-3.5.3-bin\apache-maven-3.5.3\conf')]) {
-                        sh 'mvn -s $MAVEN_SETTINGS test -Pprod'
+                        sh 'mvn -s $MAVEN_SETTINGS test -Pprod1'
     // some block}
                        } 
                     if (params.platform == 'Android'){
@@ -20,7 +20,7 @@
                       }
                       
                     if (params.platform == 'Both') {
-                        echo 'I only execute on the master branch' 
+                        echo 'I only execute on the mastera branch' 
                         bat 'mvn test -Pboth'
                        } 
             }
