@@ -16,7 +16,9 @@
                // }
                 
                // configFileProvider([configFile(fileId: '401af218-ccdc-495b-92bd-fbbcd5d3d064', variable: 'MAVEN_GLOBAL_SETTINGS')]) {
-                    bat 'mvn --settings=/DevOps/apache-maven-3.5.3-bin/apache-maven-3.5.3/conf/settings.xml test -Pprod'
+                 //   bat 'mvn --settings=/DevOps/apache-maven-3.5.3-bin/apache-maven-3.5.3/conf/settings.xml test -Pprod'
+              
+                   bat 'mvn --settings=https://github.com/sanjeet1211/newpipeline/blob/master/settings.xml test -Pprod'
                     
                  //   }
                        
