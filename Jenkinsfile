@@ -10,7 +10,7 @@
                     if (params.platform == 'iOS') {
                         echo 'I only execute on the master branch' 
                        
-                        configFileProvider([configFile('C:\DevOps\apache-maven-3.5.3-bin\apache-maven-3.5.3\conf')]) {
+                        configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
                         sh 'mvn -s $MAVEN_SETTINGS test -Pprod1'
     // some block}
                        } 
