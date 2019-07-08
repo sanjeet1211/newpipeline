@@ -13,7 +13,7 @@
               //           configFileProvider([configFile('401af218-ccdc-495b-92bd-fbbcd5d3d064')]) {
                //     sh 'mvn -gs $MAVEN_GLOBAL_SETTINGS test -Pprod'
                  // bat 'mvn --settings="${WORKSPACE}/settings.xml" test -Pprod'
-                  bat 'mvn --settings=readFile 'settings.xml' test -Pprod'
+                  bat 'mvn --settings settings.xml test -Pprod'
                // }
                 
                // configFileProvider([configFile(fileId: '401af218-ccdc-495b-92bd-fbbcd5d3d064', variable: 'MAVEN_GLOBAL_SETTINGS')]) {
